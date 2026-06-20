@@ -629,6 +629,12 @@ html[data-lang="fa"] .skill-card__tags li {
   border-bottom: 1px solid var(--glass-border);
 }
 .project-card__browser-bar .terminal__dot { width: 9px; height: 9px; }
+.project-card__screenshot {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+}
 .project-card__browser-screen {
   padding: 20px;
   display: flex;
