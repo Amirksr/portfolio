@@ -4,18 +4,23 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import { useLang } from "@/lib/LangContext";
 import Reveal from "./Reveal";
+import type { TranslationKey } from "@/lib/translations";
 
-const contactItems = [
+type ContactItem =
+  | { icon: React.ElementType; href: string; labelKey: TranslationKey; value: string }
+  | { icon: React.ElementType; href: string; label: string; value: string };
+
+const contactItems: ContactItem[] = [
   {
     icon: Mail,
     href: "mailto:amirkasraeian611@gmail.com",
-    labelKey: "contact.email" as const,
+    labelKey: "contact.email",
     value: "amirkasraeian611@gmail.com",
   },
   {
     icon: Phone,
     href: "tel:+989133184989",
-    labelKey: "contact.phone" as const,
+    labelKey: "contact.phone",
     value: "+98 913 318 4989",
   },
   {
@@ -64,6 +69,8 @@ export default function Contact() {
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {contactItems.map((item, i) => {
             const Icon = item.icon;
+            const displayLabel =
+              "labelKey" in item ? t(item.labelKey) : item.label;
             return (
               <Reveal key={item.value} delay={0.06 * i}>
                 <motion.a
@@ -82,7 +89,7 @@ export default function Contact() {
                     <Icon size={22} strokeWidth={1.8} />
                   </span>
                   <span className="font-mono text-[0.74rem] uppercase tracking-[0.06em] text-ink-tertiary">
-                    {"labelKey" in item ? t(item.labelKey) : item.label}
+                    {displayLabel}
                   </span>
                   <span dir="ltr" className="break-words text-[0.92rem]">
                     {item.value}
