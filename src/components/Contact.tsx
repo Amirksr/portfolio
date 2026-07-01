@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import { useLang } from "@/lib/LangContext";
 import Reveal from "./Reveal";
-import type { TranslationKey } from "@/lib/translations";
+import type { TranslationKey } from "@/data/content";
 
 type ContactItem =
   | { icon: React.ElementType; href: string; labelKey: TranslationKey; value: string }
