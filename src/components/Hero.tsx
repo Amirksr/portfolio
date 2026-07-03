@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useLang } from "@/lib/LangContext";
 import Terminal from "./Terminal";
 
@@ -106,13 +107,36 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
+        {/* Right column: Avatar + Terminal */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="order-1 lg:order-2"
+          className="order-1 flex flex-col items-center gap-8 lg:order-2"
         >
-          <Terminal />
+          {/* Avatar */}
+          <div className="relative">
+            {/* Glow ring */}
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-accent to-accent2 opacity-60 blur-md" />
+            {/* Border ring */}
+            <div className="relative rounded-full p-[3px] bg-gradient-to-br from-accent to-accent2">
+              <div className="rounded-full overflow-hidden w-[148px] h-[148px] md:w-[168px] md:h-[168px]">
+                <Image
+                  src="/avatar.jpg"
+                  alt="Amir Kasraeian"
+                  width={168}
+                  height={168}
+                  className="object-cover w-full h-full"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Terminal */}
+          <div className="w-full">
+            <Terminal />
+          </div>
         </motion.div>
       </div>
 
