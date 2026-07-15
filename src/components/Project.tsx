@@ -100,7 +100,7 @@ export default function Project() {
 
               <div className="flex flex-wrap gap-3.5">
                 <a
-                  href="https://github.com/Amirksr/DriveKitDemo"
+                  href="https://github.com/Amirksr/DriveKit1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full bg-gradient-to-br from-accent to-[#00b8a3] px-7 py-3.5 text-center font-semibold text-[#061212] shadow-[0_8px_24px_rgba(0,217,192,0.35)] transition-transform hover:-translate-y-0.5"
