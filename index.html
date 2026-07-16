@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amir Kasraeian — Front-End Developer</title>
+<meta name="description" content="Amir Kasraeian — Front-End Developer specializing in React, Next.js, and modern web interfaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ambient background -->
+<div class="bg-glow bg-glow--1"></div>
+<div class="bg-glow bg-glow--2"></div>
+<div class="bg-grid"></div>
+
+<!-- Nav -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">AK<span class="nav__logo-dot">.</span></a>
+    <div class="nav__links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#project" data-i18n="nav.project">Project</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav__actions">
+      <button id="langToggle" class="lang-toggle" aria-label="Toggle language">FA</button>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="navMobile">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#skills" data-i18n="nav.skills">Skills</a>
+    <a href="#project" data-i18n="nav.project">Project</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Front-End Developer</p>
+      <h1 class="hero__title">
+        <span data-i18n="hero.title1">Building interfaces</span><br>
+        <span class="hero__title-accent" data-i18n="hero.title2">that feel alive.</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">I'm Amir Kasraeian — a self-driven front-end developer crafting fast, animated, and thoughtful web experiences with React and Next.js.</p>
+      <div class="hero__cta">
+        <a href="#project" class="btn btn--primary" data-i18n="hero.ctaPrimary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="hero.ctaSecondary">Get In Touch</a>
+      </div>
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <span class="hero__meta-num">4+</span>
+          <span data-i18n="hero.meta1">Years Learning &amp; Building</span>
+        </div>
+        <div class="hero__meta-divider"></div>
+        <div class="hero__meta-item">
+          <span class="hero__meta-num">10+</span>
+          <span data-i18n="hero.meta2">Self-Initiated Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__terminal">
+      <div class="terminal glass">
+        <div class="terminal__bar">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--yellow"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+          <span class="terminal__title">amir@portfolio:~</span>
+        </div>
+        <div class="terminal__body" id="terminalBody"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll-cue">
+    <span data-i18n="hero.scroll">Scroll</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <p class="section-label" data-i18n="about.label">01 — About</p>
+    <div class="about__grid">
+      <h2 class="about__heading" data-i18n="about.heading">A developer who learns in public and ships what he learns.</h2>
+      <div class="about__body">
+        <p data-i18n="about.p1">I'm a front-end developer based in Isfahan, Iran, with four years of self-driven, mentor-guided experience building modern web interfaces. My focus is React and Next.js — turning designs into responsive, animated, and genuinely pleasant-to-use products.</p>
+        <p data-i18n="about.p2">Rather than collecting tutorials, I built a habit of returning to old projects and rebuilding them with whatever I'd just learned. That loop — build, learn, rebuild — is most of how I got here, and it's reflected across my GitHub portfolio of 10+ projects.</p>
+        <p data-i18n="about.p3">I'm comfortable extending into the back-end with Node.js and MongoDB when a feature calls for it, but my center of gravity stays on the interface: how it looks, how it moves, and how it feels in someone's hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-inner">
+    <p class="section-label" data-i18n="skills.label">02 — Skills</p>
+    <h2 class="section-heading" data-i18n="skills.heading">Tools I reach for.</h2>
+
+    <div class="skills__grid">
+
+      <div class="skill-card glass">
+        <div class="skill-card__head">
+          <span class="skill-card__index">01</span>
+          <h3 data-i18n="skills.core.title">Core &amp; Language</h3>
+        </div>
+        <ul class="skill-card__tags">
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass">
+        <div class="skill-card__head">
+          <span class="skill-card__index">02</span>
+          <h3 data-i18n="skills.framework.title">Frameworks &amp; State</h3>
+        </div>
+        <ul class="skill-card__tags">
+          <li>React.js</li>
+          <li>Next.js</li>
+          <li>Redux</li>
+          <li>Redux Toolkit</li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass">
+        <div class="skill-card__head">
+          <span class="skill-card__index">03</span>
+          <h3 data-i18n="skills.styling.title">Styling &amp; UI</h3>
+        </div>
+        <ul class="skill-card__tags">
+          <li>Tailwind CSS</li>
+          <li>Bootstrap</li>
+          <li>CSS Modules</li>
+          <li>Responsive Design</li>
+          <li>UI Animation</li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass">
+        <div class="skill-card__head">
+          <span class="skill-card__index">04</span>
+          <h3 data-i18n="skills.backend.title">Back-End (Working Knowledge)</h3>
+        </div>
+        <ul class="skill-card__tags">
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>MongoDB</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-card glass">
+        <div class="skill-card__head">
+          <span class="skill-card__index">05</span>
+          <h3 data-i18n="skills.tools.title">Tools &amp; Workflow</h3>
+        </div>
+        <ul class="skill-card__tags">
+          <li>Git &amp; GitHub</li>
+          <li>Vercel</li>
+          <li>npm</li>
+          <li>RegEx</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section class="project" id="project">
+  <div class="section-inner">
+    <p class="section-label" data-i18n="project.label">03 — Featured Project</p>
+    <h2 class="section-heading" data-i18n="project.heading">A storefront built to feel fast.</h2>
+
+    <div class="project-card glass">
+      <div class="project-card__visual">
+        <div class="project-card__browser">
+          <img src="drivekit-screenshot.jpg" alt="DriveKit auto parts e-commerce platform built with Next.js and TypeScript" class="project-card__screenshot" loading="lazy">
+        </div>
+      </div>
+
+      <div class="project-card__content">
+        <h3 class="project-card__title">DriveKit</h3>
+        <p class="project-card__subtitle" data-i18n="project.subtitle">Auto Parts E-Commerce Platform</p>
+        <p class="project-card__desc" data-i18n="project.desc">I developed a complete e-commerce platform for automotive parts — a full shopping cart with persistent state, a multi-criteria filtering system for fast part discovery, and custom UI animations tuned to make the whole experience feel quicker than it is.</p>
+
+        <ul class="project-card__features">
+          <li data-i18n="project.feat1">Full cart system — add, update, remove, persisted state</li>
+          <li data-i18n="project.feat2">Multi-criteria filtering by category &amp; compatibility</li>
+          <li data-i18n="project.feat3">Custom animations &amp; smooth page transitions</li>
+        </ul>
+
+        <div class="project-card__tags">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Tailwind CSS</span>
+        </div>
+
+        <div class="project-card__links">
+          <a href="https://drive-kit1.vercel.app" target="_blank" rel="noopener" class="btn btn--primary">
+            <span data-i18n="project.ctaDemo">View Live Demo</span>
+          </a>
+          <a href="https://github.com/Amirksr/DriveKit1" target="_blank" rel="noopener" class="btn btn--ghost">
+            <span data-i18n="project.ctaGithub">More on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <p class="section-label" data-i18n="contact.label">04 — Contact</p>
+    <h2 class="contact__heading" data-i18n="contact.heading">Let's build something together.</h2>
+    <p class="contact__subtitle" data-i18n="contact.subtitle">Open to freelance projects and full-time front-end roles.</p>
+
+    <div class="contact__grid">
+      <a href="mailto:amirkasraeian611@gmail.com" class="contact-card glass">
+        <span class="contact-card__icon">✉</span>
+        <span class="contact-card__label" data-i18n="contact.email">Email</span>
+        <span class="contact-card__value">amirkasraeian611@gmail.com</span>
+      </a>
+      <a href="tel:+989133184989" class="contact-card glass">
+        <span class="contact-card__icon">☎</span>
+        <span class="contact-card__label" data-i18n="contact.phone">Phone</span>
+        <span class="contact-card__value">+98 913 318 4989</span>
+      </a>
+      <a href="https://github.com/Amirksr" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="contact-card__icon">⌥</span>
+        <span class="contact-card__label">GitHub</span>
+        <span class="contact-card__value">github.com/Amirksr</span>
+      </a>
+      <a href="https://www.linkedin.com/in/amir-kasraeian" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="contact-card__icon">in</span>
+        <span class="contact-card__label">LinkedIn</span>
+        <span class="contact-card__value">amir-kasraeian</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Amir Kasraeian. <span data-i18n="footer.text">Designed &amp; built from scratch.</span></p>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
